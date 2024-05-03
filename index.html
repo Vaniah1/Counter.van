@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter App</title>
+    <title>CounterApp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>People entered:</h1>
-    <h2 id="count-el">0</h2>
-    <button id="increment-btn" onclick="increment()">INCREMENT</button>
-    <button id="save-btn" onclick="save()">SAVE</button>
-    <p id="save-el">Previous entries: </p>
+    <div class="container">
+        <header>
+            <h1>People Counter</h1>
+            <img src="https://img.icons8.com/color/48/000000/groups.png" alt="People Icon" class="people-icon">
+        </header>
+        <main>
+            <div class="counter">
+                <h2 id="count-el">0</h2>
+                <div class="button-group">
+                    <button id="increment-btn" onclick="increment()">
+                        <img src="https://img.icons8.com/color/24/000000/plus.png" alt="Plus Icon">
+                        <span>INCREMENT</span>
+                    </button>
+                    <button id="save-btn" onclick="save()">
+                        <img src="https://img.icons8.com/color/24/000000/save-close.png" alt="Save Icon">
+                        <span>SAVE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="entries">
+                <h3>Previous Entries:</h3>
+                <p id="save-el">No entries yet.</p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 CounterApp. All rights reserved.</p>
+        </footer>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
